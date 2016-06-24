@@ -1,0 +1,78 @@
+2. Methods
+
+2.1 Transit of HAT-P-11 b
+
+- We first need to fit for the transit parameters in order to fit for the spot parameters later
+
+- To find the transit parameters, we need to find transits to fit without spot crossings (hard!)
+
+- We find transits without spot crossings with my simple technique
+
+- The above technique is likely produces a non-gaussian depth distribution, but it is a sufficient approximation 
+
+- We fit the transits without spot crossings for these planet/orbit parameters, with these other ones fixed, and here’s why
+
+- We find agreement with these previously published transit parameters, and resolve a tension in the literature for these other ones
+Motivate this: for the remainder of the paper, we fix transit parameters and fit only for the spot parameters
+
+2.2 Spot Occultation Model
+
+- Describe the degeneracies that make locating starspot positions so difficult to retrieve
+
+- Refer to the (forthcoming) Davenport paper that demonstrates that model convergence is elusive/expensive for unseeded spot models
+
+- These degeneracies lead us to find better initial spot parameters by optimizing an approximate light curve model first, then using the detailed forward-model of Hebb et al.. We explain both approaches below.
+
+2.2.1 Initial, Heuristic Spot Occultation Model
+
+
+- What we model: Describe shapes of spot crossing anomalies, their frequency and duration; motivate Gaussian approximation of spot occultations
+
+- How we model: Describe technique for searching for occultation “peaks” in transit residuals, then fitting peaks with Gaussians
+
+- How well we model Part 1: Describe possible shortcomings of this approximation, and why we think those are OK approximations
+
+- How well we model Part 2: Describe quality of algorithm via results of the null test (searched for spots where there are none, no false positives were found).
+
+- What to do with model Part 1: 
+
+- What to do with model Part 2: Describe how these Gaussian occultation fits are converted to stellar lat/lon, to be used as inputs for the detailed STSP model
+
+2.2.2 Detailed “STSP” Spot Occultation Model
+
+- Describe the STSP spot occultation model (parameters, assumptions, advantages)
+
+- Describe previous work with STSP (forthcoming Hebb paper, forthcoming Davenport paper)
+
+- Motivate our decision to only model the in-transit light curve first, and not the out-of-transit light curve also, despite STSP’s ability to do so
+
+- Describe how we use the heuristic model outputs as STSP inputs to seed MCMC chains
+
+- Describe distributed computing strategy for efficient model computation despite large number of free parameters
+
+- Describe convergence tests (hmm I guess we’ll need some convincing ones, won’t we)
+
+- Describe model outputs and what we’ll do with them in the next section
+
+3. Results
+
+3.1.1 Initial, Heuristic Spot Occultation Model Results
+
+- Describe Figure 1: distribution of spots recovered per transit, their corresponding orbital phases
+
+- interpret Figure 1: Is the above reasonable? How does it compare to the sun?
+
+- constraints on un-detected spots at this step of the pipeline
+
+3.1.1 Detailed “STSP” Spot Occultation Model Results
+
+- Describe Figure 2: stellar spot map, plotted over completeness contours
+
+- Interpret Figure 2: Due to stellar rotation and orbital period commensurability, we sample 6 longitudes well. Longitudes seem mostly interchangeable with one another (prove this)
+
+- We see active latitude near +35 deg, no opposite active latitude near -35 deg. Show confidence that there is asymmetry (somehow)
+
+- No change in active latitude in time? Compare with solar cycle
+
+
+
